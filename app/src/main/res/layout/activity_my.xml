@@ -1,0 +1,161 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView01"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MyActivity"
+    android:id="@+id/main">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter Employee Details:"
+        android:id="@+id/title"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:autoText="false"
+        android:clickable="true"
+        android:capitalize="words" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name:"
+        android:id="@+id/name"
+        android:layout_below="@+id/title"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:textStyle="italic" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/inputName"
+        android:layout_below="@+id/title"
+        android:layout_toEndOf="@+id/name"
+        android:layout_alignRight="@+id/title"
+        android:layout_alignEnd="@+id/title"
+        android:layout_toRightOf="@+id/name" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Type:"
+        android:id="@+id/type"
+        android:layout_below="@+id/inputName"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textStyle="italic"/>
+
+    <RadioGroup
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/inputName"
+        android:orientation="horizontal"
+        android:id="@+id/inputType"
+        android:layout_alignLeft="@+id/inputName"
+        android:layout_alignStart="@+id/inputName">
+
+        <RadioButton android:id="@+id/radio_part"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Part-Type"/>
+        <RadioButton android:id="@+id/radio_full"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Full Time"/>
+    </RadioGroup>
+    <LinearLayout
+        android:id="@+id/date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/inputType">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Joining date:"
+        android:id="@+id/textdate"
+
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:textStyle="italic"
+        android:editable="false" />
+
+    <DatePicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/inputDate"
+        android:calendarViewShown="false"
+        style="@style/AppTheme"
+        android:startYear="2013" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Technologies Known:"
+        android:id="@+id/tech"
+        android:layout_below="@+id/date"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textStyle="italic"/>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tech"
+        android:id="@+id/linearLayout">
+    <CheckBox android:id="@+id/checkbox_java"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Java"
+        />
+    <CheckBox android:id="@+id/checkbox_android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Android"
+        />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Country:"
+        android:id="@+id/country"
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textStyle="italic"/>
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/inputCountry"
+        android:spinnerMode="dropdown"
+        android:layout_toEndOf="@+id/country"
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:id="@+id/button"
+        android:layout_toEndOf="@+id/tech"
+        android:layout_below="@+id/inputCountry"
+        android:layout_centerHorizontal="true"
+        android:onClick="onSubmitClick"/>
+
+
+</RelativeLayout>
+</ScrollView>

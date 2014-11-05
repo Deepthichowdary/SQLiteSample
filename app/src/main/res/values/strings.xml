@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">DBApplication</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="TABLE_NAME">employee</string>
+    <string name="COLUMN_TITLE_NAME">Name</string>
+    <string name="COLUMN_TITLE_TYPE">Type</string>
+    <string name="COLUMN_TITLE_JOINING">Joining</string>
+    <string name="COLUMN_TITLE_COUNTRY">Country</string>
+    <string name="COLUMN_NAME_TYPE">String</string>
+    <string name="COLUMN_TYPE_TYPE">String</string>
+    <string name="COLUMN_JOINING_TYPE">Date</string>
+    <string name="COLUMN_COUNTRY_TYPE">String</string>
+    <string name="COLUMN_TECH_TYPE">String</string>
+    <string name="title_activity_employee_dbimplementer">EmployeeDBImplementer</string>
+
+</resources>
